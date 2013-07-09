@@ -1,4 +1,4 @@
 {
   "env": "production",
-  "run_list":["role[appserver]"]
+  "run_list":["role[app]", "role[db]"]
 }

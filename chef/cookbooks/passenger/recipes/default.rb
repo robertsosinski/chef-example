@@ -1,5 +1,6 @@
 package "libcurl4-openssl-dev"
 
+ruby_version = "2.0.0"
 passenger_version = "4.0.7"
 
 gem_package "passenger" do
@@ -22,7 +23,10 @@ template "/opt/nginx/conf/nginx.conf" do
   owner "root"
   group "root"
 
-  variables :test_variable => "hello world 1234", :rails_env => node.env
+  variables :ruby_version => ruby_version,
+            :passenger_version => passenger_version,
+            :rails_env => node.env
+
   notifies :reload, "service[nginx]"
 end
 
