@@ -1,3 +1,7 @@
+ruby_version    = "2.0.0"
+ruby_patchlevel = "p247"
+ruby_filename   = "ruby-#{ruby_version}-#{ruby_patchlevel}"
+
 package "build-essential"
 package "git-core"
 package "curl"
@@ -9,10 +13,6 @@ package "libsqlite3-dev"
 package "sqlite3"
 package "libxml2-dev"
 package "libxslt-dev"
-
-ruby_version    = "2.0.0"
-ruby_patchlevel = "p247"
-ruby_filename   = "ruby-#{ruby_version}-#{ruby_patchlevel}"
 
 directory "/root/src" do
   action :create

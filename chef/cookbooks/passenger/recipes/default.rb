@@ -1,7 +1,7 @@
-package "libcurl4-openssl-dev"
-
 ruby_version = "2.0.0"
 passenger_version = "4.0.7"
+
+package "libcurl4-openssl-dev"
 
 gem_package "passenger" do
   version passenger_version
@@ -19,9 +19,10 @@ end
 
 template "/opt/nginx/conf/nginx.conf" do
   source "nginx.conf.erb"
-  mode  "0644"
+
   owner "root"
   group "root"
+  mode  "0644"
 
   variables :ruby_version => ruby_version,
             :passenger_version => passenger_version,

@@ -1,11 +1,6 @@
 user "deploy" do
-  home "/home/deploy"
-end
+  home  "/home/deploy"
+  shell "/bin/bash"
 
-directory "/home/deploy" do
-  action :create
-
-  owner "deploy"
-  group "deploy"
-  mode  "0644"
+  supports :manage_home => true
 end
