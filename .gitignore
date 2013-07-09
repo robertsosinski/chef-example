@@ -1,0 +1,8 @@
+.DS_Store
+*.swo
+*.swp
+/.bundle
+/bin
+/log/*.log
+/public/assets
+/tmp/**/*

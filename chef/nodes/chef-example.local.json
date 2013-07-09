@@ -1,0 +1,4 @@
+{
+  "env": "production",
+  "run_list":["role[appserver]"]
+}
